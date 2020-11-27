@@ -6,7 +6,8 @@ public class StarMechanic : MonoBehaviour
 {
     [SerializeField] GameObject[] PathList;
     //public GameObject star;
-    public float speed;
+    protected Vector3 startStartPos; 
+    [SerializeField] float speed;
     float moveTime;
     Vector3 CurrentPath;
     int currentPath;
@@ -16,6 +17,7 @@ public class StarMechanic : MonoBehaviour
     }
     void CheckPath()
     {
+        startStartPos = transform.position; 
         //star = GetComponent<GameObject>();
         CurrentPath = PathList[currentPath].transform.position;
     }

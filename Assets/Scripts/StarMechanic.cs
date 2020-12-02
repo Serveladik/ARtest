@@ -5,12 +5,11 @@ using UnityEngine;
 public class StarMechanic : MonoBehaviour
 {
     [SerializeField] GameObject[] PathList;
-    //public GameObject star;
-    protected Vector3 startStartPos; 
     [SerializeField] float speed;
-    float moveTime;
-    Vector3 CurrentPath;
-    int currentPath;
+    private float moveTime;
+    private Vector3 CurrentPath;
+    private int currentPath;
+    protected Vector3 startStartPos; 
     void Start()
     {
         CheckPath();
@@ -18,11 +17,9 @@ public class StarMechanic : MonoBehaviour
     void CheckPath()
     {
         startStartPos = transform.position; 
-        //star = GetComponent<GameObject>();
         CurrentPath = PathList[currentPath].transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         StarMovement();

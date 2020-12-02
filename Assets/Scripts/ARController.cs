@@ -15,15 +15,14 @@ namespace GoogleARCore.Examples.HelloAR
     
     public class ARController : MonoBehaviour
     {
+        private bool foundHit = false;
         public InstantPlacementMenu InstantPlacementMenu;
         public GameObject InstantPlacementPrefab;
         public Camera FirstPersonCamera;
         public GameObject GameObjectVerticalPlanePrefab;
         public GameObject GameObjectHorizontalPlanePrefab;
         public GameObject GameObjectPointPrefab;
-
         public bool targetExist = false;
-        bool foundHit = false;
         TrackableHit hit;
 
         public void Awake()

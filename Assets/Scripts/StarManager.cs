@@ -11,7 +11,6 @@ namespace GoogleARCore
         //public Sprite playSound;
         [SerializeField] private SpriteRenderer sprite;
         [SerializeField] private Collider collider;
-        //[SerializeField] bool touched = false;
 
 
         void Start()
